@@ -16,10 +16,28 @@
 
 // $(document).ready(function () {
 //   $('#solarbtn').click(function () {
-//    $('#solarGif').show();
-//  let promise1
+//     $('#solarGif').show();
+// //   $('#shockbtn').click(function () {
+// //    $('#shockGif').show();
+// //    $('#massbtn').click(function () {
+//   //    $('#massGif').show();
+//   let promiseSun = SpaceDoom.shiningSun();
+// //  let promiseShock = SpaceDoom.shockDestruction();
+// //  let promiseMass = SpaceDoom.massDestruction();
+// promiseSun.then(response => {
+//   let solarGifBody = JSON.parse(response);
+//   $('.solarGif').html(`<img src="${response["data"][0]["images"]["original"]["url"]}">`);
+//   $('#showSolarError').text("");
+//   }, function(error) {
+//     $('.showSolarError').text(`There was an error processing the doom of this world: ${error}`);
+// });
+// // promiseShock.then(response => {
+// // let shockGifBody
+// // })
 
-// //     export default class SpaceDoom {
+
+// //
+// export default class SpaceDoom {
 //   static shiningSun() {
 //     return new Promise(function (resolve, reject) {
 //     let request = new XMLHttpRequest();
@@ -33,7 +51,7 @@
 
 //     request.open("GET", url, true);
 //     request.send();
-// //     export default class SpaceDoom {
+//   })
 //   static glowingEarth() {
 //     return new Promise(function (resolve, reject) {
 //     let request = new XMLHttpRequest();
@@ -64,8 +82,8 @@
 
 //     function getElements(response) {
 //       $('.solarGif').html(`<img src="${response["data"][0]["images"]["original"]["url"]}">`);
-//       $('.stormGifs').append(`<img src="${response["data"][0]["images"]["original"]["url"]}">`);
-//       $('.coronalGifs').append(`<img src="${response["data"][0]["images"]["original"]["url"]}">`);
+//       $('.stormGifs').html(`<img src="${response["data"][0]["images"]["original"]["url"]}">`);
+//       $('.coronalGifs').html(`<img src="${response["data"][0]["images"]["original"]["url"]}">`);
 
 //     }
 

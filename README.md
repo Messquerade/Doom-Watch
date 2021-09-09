@@ -45,6 +45,6 @@ Copyright(c)2021 Anna Clarke, Becket Harvey and Paige Tiedeman
 
 ## Contact Information
 
-Anna Clarke: annac.klingberg@gmail.com
+Anna Clarke: anclarkie@gmail.com
 Paige Tiedeman: see my repo @ github.com/paigetiedeman
 Becket Harvey: see my repo @ github.com/sunshinepunch
