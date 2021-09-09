@@ -4,8 +4,8 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import SpaceService from './space.service';
 
-$('document').ready(function() {
-  $('button#End-Times').click(function() {
+$('document').ready(function () {
+  $('button#End-Times').click(function () {
     let promise1 = SpaceService.solarDestruction();
     let promise2 = SpaceService.shockDestruction();
     let promise3 = SpaceService.massDestruction();
@@ -40,14 +40,17 @@ $('document').ready(function() {
           day: 'numeric'
         }
       );
-      
+
       $("#solar-destruction").text(solarTime);
       $("#shock-destruction").text(shockTime);
       $("#mass-destruction").text(massTime);
-    });
+    })
+      .catch(error => {
+        $("#show-errors").text(`There was an error processing your request: ${error}`);
+      });
   });
 
-  $("#form-name").submit(function() {
+  $("#form-name").submit(function () {
     let inputName = $("#name").val();
     $("#name-display").text(` ${inputName}`);
     $(".name-results").show();
