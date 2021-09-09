@@ -18,7 +18,7 @@ export default class SpaceService {
   static shockDestruction() {
     return new Promise(function (resolve, reject) {
       let request = new XMLHttpRequest();
-      const url = `https://api.nasa.gov/DONKI/IPS?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd&location=LOCATION&catalog=CATALOG&api_key=${process.env.API_KEY}`;
+      const url = `https://api.nasa.gov/DONKI/IPS?startDate=yyyy-MM-dd&endDate=yyyy-MM-dd&api_key=${process.env.API_KEY}`;
       request.onload = function () {
         if (this.status === 200) {
           resolve(request.response);
