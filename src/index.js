@@ -13,9 +13,37 @@ $('document').ready(function() {
       let solarBody = JSON.parse(values[0]);
       let shockBody = JSON.parse(values[1]);
       let massBody = JSON.parse(values[2]);
-      $("#solar-destruction").text(solarBody[0].peakTime);
-      $("#shock-destruction").text(shockBody[0].eventTime);
-      $("#mass-destruction").text(massBody[0].startTime);
+      let solarTime = solarBody[0].peakTime;
+      let shockTime = shockBody[0].eventTime;
+      let massTime = massBody[0].startTime;
+      solarTime = new Date(solarTime).toLocaleDateString(
+        'en-gb',
+        {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }
+      );
+      shockTime = new Date(shockTime).toLocaleDateString(
+        'en-gb',
+        {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }
+      );
+      massTime = new Date(massTime).toLocaleDateString(
+        'en-gb',
+        {
+          year: 'numeric',
+          month: 'long',
+          day: 'numeric'
+        }
+      );
+      
+      $("#solar-destruction").text(solarTime);
+      $("#shock-destruction").text(shockTime);
+      $("#mass-destruction").text(massTime);
     });
   })
 })
