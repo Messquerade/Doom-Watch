@@ -45,5 +45,11 @@ $('document').ready(function() {
       $("#shock-destruction").text(shockTime);
       $("#mass-destruction").text(massTime);
     });
-  })
-})
+  });
+
+  $("#form-name").submit(function() {
+    let inputName = $("#name").val();
+    $("#name-display").text(` ${inputName}`);
+    $(".name-results").show();
+  });
+});

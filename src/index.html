@@ -5,10 +5,26 @@
 </head>
 <body>
   <div class='container'>
-    <h1>Welcome to Doom Watch!</h1>
-    <h2>I'm Squids Mckenzie, here for our favorite pastime: watching planetary destruction in different alternate realities.</h2>
-    <img src="assets/images/squid_mcgee.jpg" alt="cute alien">
-    <label id="End-Times">Find when and how you face destruction:</label>
+    <div class="header">
+      <h1>Welcome to Doom Watch!</h1>
+      <h2>I'm Squids Mckenzie, here for our favorite pastime: watching planetary destruction in different alternate realities.</h2>
+    </div>
+    <div class="row">
+      <div class="col-3">
+        <img src="assets/images/squid_mcgee.jpg" alt="cute alien">
+      </div>
+      <div class="col-4">
+        <form id="form-name">
+          <label for="name">What's your name, stranger?</label>
+          <input class="form-control" type="text" id="name">
+          <button type="submit" class="btn-primary" id="name">Nice to Meet You!</button>
+        </form>
+        <div class="name-results">
+          <p>Thanks<span id="name-display"></span>! According to my coordinates, you come from a planet called Earth.</p>
+        </div>
+      </div>
+    </div>
+    <label for="End-Times">Find when and how you face destruction:</label>
     <button class="btn-success" id="End-Times">END IS NIGH!</button>
     <div id="solar-flare">
       <p>In alternate reality 668^9K2*JJ, a solar flare burnt your entire planet to a crisp on <span id="solar-destruction"></span></p>

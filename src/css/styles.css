@@ -12,3 +12,16 @@ img {
   color: red;
   font-style: oblique;
 }
+
+.header {
+  margin-bottom: 25px;
+  margin-top: 10px;
+}
+
+.name-results {
+  display: none;
+}
+
+button {
+  margin: 5px;
+}
