@@ -10,7 +10,12 @@ $('document').ready(function() {
     let promise2 = SpaceService.shockDestruction();
     let promise3 = SpaceService.massDestruction();
     Promise.all([promise1, promise2, promise3]).then((values) => {
-      console.log(values);
+      let solarBody = JSON.parse(values[0]);
+      let shockBody = JSON.parse(values[1]);
+      let massBody = JSON.parse(values[2]);
+      $("#solar-destruction").text(solarBody[0].peakTime);
+      $("#shock-destruction").text(shockBody[0].eventTime);
+      $("#mass-destruction").text(massBody[0].startTime);
     });
   })
 })
