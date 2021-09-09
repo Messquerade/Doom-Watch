@@ -35,7 +35,8 @@ to "start": "npm run build; webpack-dev-server --open --mode development",
 
 ## Known Bugs
 
-* _Error messages not showing_
+* _Error messages not showing specific error_
+* _NAV bar links are for show_
 
 ## License
 
@@ -45,6 +46,6 @@ Copyright(c)2021 Anna Clarke, Becket Harvey and Paige Tiedeman
 
 ## Contact Information
 
-Anna Clarke: anclarkie@gmail.com
-Paige Tiedeman: see my repo @ github.com/paigetiedeman
+Anna Clarke: anclarkie@gmail.com  
+Paige Tiedeman: see my repo @ github.com/paigetiedeman  
 Becket Harvey: see my repo @ github.com/sunshinepunch

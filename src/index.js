@@ -3,11 +3,6 @@ import 'bootstrap';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import './css/styles.css';
 import SpaceService from './space.service';
-import SpaceDoom from './space.doom';
-
-
-
-
 
 $('document').ready(function () {
   $('button#End-Times').click(function () {
@@ -58,19 +53,37 @@ $('document').ready(function () {
     $("#solar-flare").show();
     $("#IPS").hide();
     $("#CME").hide();
+    document.getElementById("solar-flare").scrollIntoView({behavior: 'smooth'});
+  })
+
+  $('#solarbtn').click(function () {
+    $("#solarGifBody").slideToggle();
+    document.getElementById("solarGifBody").scrollIntoView({behavior: 'smooth'});
   })
 
   $("#IPS-button").click(function () {
     $("#IPS").show();
     $("#solar-flare").hide();
     $("#CME").hide();
+    document.getElementById("IPS").scrollIntoView({behavior: 'smooth'});
+  })
+
+  $("#shockbtn").click(function () {
+    $("#shockGifBody").toggle();
+    document.getElementById("shockGifBody").scrollIntoView({behavior: 'smooth'});
   })
 
   $("#CME-button").click(function () {
     $("#CME").show();
     $("#solar-flare").hide();
     $("#IPS").hide();
+    document.getElementById("CME").scrollIntoView({behavior: 'smooth'});
   })
+
+  $("#coronalbtn").click(function(){
+    $("#cmeGifBody").toggle();
+    document.getElementById("cmeGifBody").scrollIntoView({behavior: 'smooth'});
+  });
 
   $("#form-name").submit(function (event) {
     event.preventDefault();
@@ -78,23 +91,5 @@ $('document').ready(function () {
     $("#name-display").text(` ${inputName}`);
     $(".name-results").show();
     $("#form-name").hide();
-  });
-
-  $('#solarbtn').click(function () {
-    //   $('#shockbtn').click(function () {
-    //    $('#shockGif').show();
-    //    $('#massbtn').click(function () {
-    //    $('#massGif').show();
-    let promiseSun = SpaceDoom.shiningSun();
-    //  let promiseShock = SpaceDoom.shockDestruction();
-    //  let promiseMass = SpaceDoom.massDestruction();
-    promiseSun.then(response => {
-      let solarGifBody = JSON.parse(response);
-      $('.solarGif').html(`<img src="${response["data"][0]["images"]["original"]["url"]}">`);
-      $('#showSolarError').text("");
-      $('#solarGif').show();
-    }, function (error) {
-      $('.showSolarError').text(`There was an error processing the doom of this world: ${error}`);
-    });
   });
 });
