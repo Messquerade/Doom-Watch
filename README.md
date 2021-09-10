@@ -19,6 +19,7 @@
 * _Webpack_
 
 ## Description
+An adorable alien shows the user the joy of watching your own demise from the safety of an alternate reality. Users can see when the Earth could have been destroyed by either solar flares, interplanetary shock, or coronal mass ejection. Site uses NASA's API to determine when the last of these cosmic events occured.
 
 ## Setup/Installation Requirements
 
@@ -49,3 +50,7 @@ Copyright(c)2021 Anna Clarke, Becket Harvey and Paige Tiedeman
 Anna Clarke: anclarkie@gmail.com  
 Paige Tiedeman: see my repo @ github.com/paigetiedeman  
 Becket Harvey: see my repo @ github.com/sunshinepunch
+
+
+
+
